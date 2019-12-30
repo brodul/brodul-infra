@@ -11,4 +11,4 @@ rbac:
   create: true
 
 tcp:
-  25575: "default/minecraft-minecraft:25575"
+  25565: "default/minecraft-minecraft:25565"

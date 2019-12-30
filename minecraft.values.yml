@@ -1,3 +1,4 @@
+
 # ref: https://hub.docker.com/r/itzg/minecraft-server/
 image: itzg/minecraft-server
 imageTag: latest
@@ -26,19 +27,19 @@ livenessProbe:
   command:
     - mcstatus
     - localhost:25565
-    - ping
+    - status
   initialDelaySeconds: 60
   periodSeconds: 5
 readinessProbe:
   command:
     - mcstatus
     - localhost:25565
-    - ping
+    - status
   initialDelaySeconds: 60
   periodSeconds: 5
 minecraftServer:
   # This must be overridden, since we can't accept this for the user.
-  eula: "FALSE"
+  eula: "TRUE"
   # One of: LATEST, SNAPSHOT, or a specific version (ie: "1.7.9").
   version: "1.15.1"
   # This can be one of "VANILLA", "FORGE", "SPIGOT", "BUKKIT", "PAPER", "FTB", "SPONGEVANILLA"
@@ -62,9 +63,9 @@ minecraftServer:
   # One of: peaceful, easy, normal, and hard
   difficulty: easy
   # A comma-separated list of player names to whitelist.
-  whitelist:
+  whitelist: brodul,tamejhna
   # A comma-separated list of player names who should be admins.
-  ops:
+  ops: brodul
   # A server icon URL for server listings. Auto-scaled and transcoded.
   icon:
   # Max connected players.
@@ -100,7 +101,7 @@ minecraftServer:
   # One of: creative, survival, adventure, spectator
   gameMode: survival
   # Message of the Day
-  motd: "Welcome to Minecraft on Kubernetes!"
+  motd: "server in testing. world might be deleted!"
   # If true, enable player-vs-player damage.
   pvp: false
   # One of: DEFAULT, FLAT, LARGEBIOMES, AMPLIFIED, CUSTOMIZED
