@@ -1,0 +1,14 @@
+---
+controller:
+  kind: DaemonSet
+  hostNetwork: true
+  dnsPolicy: ClusterFirstWithHostNet
+  daemonset:
+    useHostPort: true
+  service:
+    type: ClusterIP
+rbac:
+  create: true
+
+tcp:
+  25575: "default/minecraft-minecraft:25575"
