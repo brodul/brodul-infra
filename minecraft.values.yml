@@ -63,7 +63,7 @@ minecraftServer:
   # One of: peaceful, easy, normal, and hard
   difficulty: easy
   # A comma-separated list of player names to whitelist.
-  whitelist: brodul,tamejhna
+  whitelist: brodul,tamejhna,Jonas_Jokic,hrabro
   # A comma-separated list of player names who should be admins.
   ops: brodul
   # A server icon URL for server listings. Auto-scaled and transcoded.
