@@ -1,2 +1,3 @@
 .terraform
 token.auto.tfvars
+secret.tfvars

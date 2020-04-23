@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: tcp-services
-  namespace: ingress
-data:
-  25565: "default/minecraft-minecraft:25565"
