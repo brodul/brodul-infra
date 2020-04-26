@@ -1,0 +1,4 @@
+creation_rules:
+    # gcp files using GCP KMS
+    - path_regex: \.enc\.tfvars$
+      gcp_kms: projects/brodul-infra/locations/europe/keyRings/infra-iaas/cryptoKeys/infra-iaas-1
