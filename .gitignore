@@ -1,3 +1,5 @@
 .terraform
 token.auto.tfvars
 secret.tfvars
+
+/experiment/prometheus/prometheus-secret.yaml
