@@ -1,0 +1,33 @@
+---
+- hosts: minecraft
+  vars:
+    max_clients: 200
+  remote_user: brodul
+  tasks:
+    - name: Add backport of openjdk-8-jre-headless
+      apt_repository:
+        repo: deb http://ftp.us.debian.org/debian sid main
+        state: present
+    - name: Ensure git
+      apt:
+        name: git
+        state: present
+        update_cache: yes
+    - name: Ensure etckeeper
+      apt:
+        name: etckeeper
+        state: present
+    - name: Ensure build essential
+      apt:
+        name: build-essential
+        state: present
+    - name: Ensure java
+      apt:
+        name: "openjdk-8-jre-headless"
+        state: present
+    - name: Add the user 'minecraft' with a specific uid and a primary group of 'admin'
+      user:
+        name: minecraft
+        home: "/opt/minecraft"
+        system: true
+        create_home: true
