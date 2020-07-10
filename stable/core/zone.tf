@@ -10,10 +10,6 @@ resource "cloudflare_zone" "brodul_com" {
   zone = "brodul.com"
 }
 
-resource "cloudflare_zone" "tajnik_si" {
-  zone = "tajnik.si"
-}
-
 resource "cloudflare_zone" "scoby_app" {
   zone = "scoby.app"
 }
