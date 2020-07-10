@@ -2,4 +2,4 @@
 token.auto.tfvars
 secret.tfvars
 
-/experiment/prometheus/prometheus-secret.yaml
+/experiment/prometheus/k8s/prometheus-secret.yaml
