@@ -11,12 +11,12 @@ function delete_secrets {
 }
 
 function dec_secrets {
-    for enc_file in $(find . -iname 'secret.enc.tfvars'); do
-        dec_file_dir="$(dirname $enc_file)"
+find . -iname 'secret.enc.tfvars' | while read -r enc_file; do
+        dec_file_dir="$(dirname "$enc_file")"
         dec_file="$dec_file_dir/secret.tfvars"
         sops -d "$enc_file" > "$dec_file"
     done
 }
 
 
-$@
+"$@"
