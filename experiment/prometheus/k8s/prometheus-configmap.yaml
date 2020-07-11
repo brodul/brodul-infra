@@ -43,6 +43,9 @@ data:
         metric_relabel_configs:
           - regex: instance
             action: labeldrop
+          - source_labels: [location]
+            regex: Trzin
+            action: keep
 
       - job_name: 'radiation'
 
@@ -54,8 +57,8 @@ data:
         scrape_timeout: 10s
 
         metric_relabel_configs:
-        - regex: instance
-          action: labeldrop
+          - regex: instance
+            action: labeldrop
 
       # - job_name: 'kubernetes-apiservers'
 
