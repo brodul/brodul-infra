@@ -17,11 +17,11 @@ TF takes about 10 to 15mins to deploy.
 - `terragrunt plan`
 - `terragrunt apply`
 - `helm repo add hashicorp https://helm.releases.hashicorp.com`
+- `gcloud container clusters get-credentials consul-experiment --zone europe-west1-b --project brodul-infra`
 - `helm install -f helm-consul-values.yaml hashicorp hashicorp/consul`
 
 ## Client configuration
 
-- `gcloud container clusters get-credentials consul-experiment --region europe-west1 --project brodul-infra`
 - `CONSUL_HTTP_ADDR=http://<LB_SERVICE_PUBLIC_IP>:80 consul members`
 
 ## Clean up
@@ -29,3 +29,4 @@ TF takes about 10 to 15mins to deploy.
 5 mins to destroy.
 
 - `terragrunt destroy`
+- `kubectx -d gke_brodul-infra_europe-west1_consul-experiment`

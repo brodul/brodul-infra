@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: netcat-check
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: netcat-check
+spec:
+  template:
+    metadata:
+      annotations:
+        consul.hashicorp.com/connect-inject: "true"
+        consul.hashicorp.com/connect-service-upstreams: "python-server:8080"
+    spec:
+      containers:
+      - name: netcat
+        image: nixery.dev/netcat
+        command: ["nc",  "-v", "-z", "localhost", "8080"]
+      restartPolicy: Never
+      serviceAccountName: netcat-check
+  backoffLimit: 1

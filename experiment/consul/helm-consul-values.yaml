@@ -6,5 +6,11 @@ ui:
   service:
     type: 'LoadBalancer'
 
+connectInject:
+  enabled: true
+
 syncCatalog:
   enabled: true
+
+client:
+  grpc: true
