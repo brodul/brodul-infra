@@ -6,6 +6,9 @@ ui:
   service:
     type: 'LoadBalancer'
 
+dns:
+  clusterIP: "10.67.240.2"
+
 connectInject:
   enabled: true
 
