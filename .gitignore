@@ -3,3 +3,5 @@ token.auto.tfvars
 secret.tfvars
 
 /experiment/prometheus/k8s/prometheus-secret.yaml
+
+.swp

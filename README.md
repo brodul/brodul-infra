@@ -14,3 +14,9 @@ For provisioning we will use:
 For secret management:
 
 - Mozilla SOPS with Google KMS
+
+## How it works?
+
+Terragrunt has a hook that will call `sops` to decrypt `secret.enc.tfvars` to `secret.tfvars`. Once decrypted the `secret.tfvars` is passed to terragrunt as terraform variables. 
+
+If you want to reproduce please open a Github issue and I will help you out. 
