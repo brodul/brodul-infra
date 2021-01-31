@@ -1,16 +1,15 @@
 # Consul GKE experiment
 
+You should be able to create a one node managed cluster on Linode without the 10$/month 
+
 - https://stackoverflow.com/questions/54119399/expose-port-80-on-digital-oceans-managed-kubernetes-without-a-load-balancer/55968709#55968709
 - https://kubernetes.github.io/ingress-nginx/deploy/baremetal/
-
-TODO:
-
 
 
 
 ## Deploy
 
-TF takes about 10 to 15mins to deploy.
+TF takes about 5 mins to deploy.
 
 - `terragrunt plan`
 - `terragrunt apply`
