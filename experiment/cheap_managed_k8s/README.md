@@ -1,4 +1,4 @@
-# Consul GKE experiment
+# Linode cheap 1 node cluster
 
 You should be able to create a one node managed cluster on Linode without the 10$/month 
 
