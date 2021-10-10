@@ -8,7 +8,8 @@ This is an experiment, if I can have my personal infrastructure opened up as muc
 
 For provisioning we will use:
 
-- Terraform and terragrunt
+- Terraform 
+- Terragrunt
 - Ansible
 
 For secret management:
